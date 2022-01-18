@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:latest
+    volumes:
+      - "./.mysql-data/db:/var/lib/mysql"
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 1234
+    cap_add:
+      - SYS_NICE  # CAP_SYS_NICE
+volumes: 
+  db:
