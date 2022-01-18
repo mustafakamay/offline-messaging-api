@@ -10,7 +10,6 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: mydb
-      MYSQL_USER: root
       MYSQL_PASSWORD: 1234
     cap_add:
       - SYS_NICE  # CAP_SYS_NICE

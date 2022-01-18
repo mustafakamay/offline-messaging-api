@@ -2,9 +2,7 @@ const User = require("../models/User")
 const sequlize = require("../database/connection");
 const router = require('express').Router();
 const jwt = require("jsonwebtoken");
-const {passwordHash} = require("../helpers/passwordToHash")
 const userCreate =  async function(req, res) {
-    // req.body.password = passwordHash(req.body.password).toString()
     if (!req.body.username || !req.body.password) {
         res.status(400).send({
             status: false,

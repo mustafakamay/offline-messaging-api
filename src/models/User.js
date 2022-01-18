@@ -1,6 +1,5 @@
 const sequlize = require("../database/connection")
 const { Sequelize, Model, DataTypes } = require("sequelize");
-const {passwordHash} = require("../helpers/passwordToHash")
 const bcrypt = require("bcrypt-nodejs")
 const User = sequlize.define("user", {
     id: {
